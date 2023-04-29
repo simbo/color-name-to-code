@@ -39,15 +39,6 @@ import { colorNameToCode } from 'color-name-to-code';
 // color name to hex value
 colorNameToCode('red'); // -> '#FF0000'
 
-// color name to CSS rgb(…) value
-colorNameToCode('red', { format: 'rgb' }); // -> 'rgb(255, 0, 0)'
-
-// color name to CSS rgba(…) value
-colorNameToCode('red', { format: 'rgb', alpha: 0.5 }); // -> 'rgba(255, 0, 0, 0.5)'
-
-// color name to numeric rgb array
-colorNameToCode('red', { format: 'array' }); // -> [255, 0, 0]
-
 // color name to lowercase hex value
 colorNameToCode('red', { lowercase: true }); // -> '#ff0000
 
@@ -56,6 +47,15 @@ colorNameToCode('red', { short: true }); // -> '#f00'
 
 // color name to hex value without leading hash
 colorNameToCode('red', { hash: false }); // -> 'FF0000'
+
+// color name to CSS `rgb(…)` value
+colorNameToCode('red', { format: 'rgb' }); // -> 'rgb(255, 0, 0)'
+
+// color name to CSS `rgba(…)` value
+colorNameToCode('red', { format: 'rgb', alpha: 0.5 }); // -> 'rgba(255, 0, 0, 0.5)'
+
+// color name to numeric RGB array
+colorNameToCode('red', { format: 'array' }); // -> [255, 0, 0]
 
 // color names will be sanitized before matching
 colorNameToCode('"white!"'); // -> '#FFFFFF'
@@ -101,7 +101,7 @@ interface Options {
 
   - `'hex'` defines a hex value as output format
   - `'rgb'` defines a CSS `rgb(…)` value as output format
-  - `'array'` defines a numeric array of rgb values as output format
+  - `'array'` defines a numeric array of RGB values as output format
 
 - `fallback: boolean` (default: `true`)  
    …tries to generate a color value from the given name input if a matching color
