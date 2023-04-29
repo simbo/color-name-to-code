@@ -4,7 +4,7 @@ export interface ColorArrayToHexOptions {
   short: boolean;
 }
 
-const colorArrayToHexDefaultOptions: ColorArrayToHexOptions = {
+export const colorArrayToHexDefaultOptions: ColorArrayToHexOptions = {
   hash: true,
   lowercase: false,
   short: false
