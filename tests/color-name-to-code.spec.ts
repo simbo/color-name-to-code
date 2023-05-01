@@ -70,7 +70,7 @@ describe('colorNameToCode', () => {
       expect(colorNameToCode('f')).toBe('#FF0000');
       expect(colorNameToCode('ffff')).toBe('#FFFF00');
       expect(colorNameToCode('Foo Bar')).toBe('#FFBBAA');
-      expect(colorNameToCode(undefined as any)).toBe('#DEFE0D');
+      expect(colorNameToCode(undefined as unknown as string)).toBe('#DEFE0D');
       expect(colorNameToCode('UNKNOWN')).toBe('#000000');
     });
 

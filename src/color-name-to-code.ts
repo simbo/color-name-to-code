@@ -51,12 +51,12 @@ export function colorNameToCode(
     if (!fallback) {
       throw new Error(`no matching color found for '${value}'`);
     }
-    const hex = value.toLowerCase().replaceAll(/[^a-f0-9]/g, '');
+    const hex = value.toLowerCase().replaceAll(/[^\da-f]/g, '');
     colorArray = (
       hex.length <= 3
-        ? [hex.substring(0, 1).repeat(2), hex.substring(1, 2).repeat(2), hex.substring(2, 3).repeat(2)]
-        : [hex.substring(0, 2), hex.substring(2, 4), hex.substring(4, 6)]
-    ).map(str => parseInt(str.length < 2 ? `${'0'.repeat(2 - str.length)}${str}` : str, 16)) as [
+        ? [hex.slice(0, 1).repeat(2), hex.slice(1, 2).repeat(2), hex.slice(2, 3).repeat(2)]
+        : [hex.slice(0, 2), hex.slice(2, 4), hex.slice(4, 6)]
+    ).map(str => Number.parseInt(str.length < 2 ? `${'0'.repeat(2 - str.length)}${str}` : str, 16)) as [
       number,
       number,
       number
@@ -64,12 +64,14 @@ export function colorNameToCode(
   }
 
   switch (format) {
-    case ColorCodeFormat.Array:
+    case ColorCodeFormat.Array: {
       return [...colorArray];
-    case ColorCodeFormat.RGB:
+    }
+    case ColorCodeFormat.RGB: {
       return colorArrayToRGB(colorArray, alpha);
-    case ColorCodeFormat.Hex:
-    default:
+    }
+    default: {
       return colorArrayToHex(colorArray, { hash, lowercase, short });
+    }
   }
 }
