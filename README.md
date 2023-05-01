@@ -5,8 +5,8 @@ A javascript library that returns a color code for a given color name.
 It supports all color names from the list of
 [named CSS colors from W3C](https://drafts.csswg.org/css-color/#named-colors).
 
-See also the enum [`ColorName`](./src/color-name.enum.ts) for a full list of all
-color names known to this library.
+It includes also the enum [`ColorName`](./src/color-name.enum.ts) with a full
+list of all known color names.
 
 The library can return hex color values, CSS `rgb(…)` values or an array of
 numeric RGB color values.
