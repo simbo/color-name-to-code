@@ -41,7 +41,7 @@
     "preflight": "npm run lint && npm run format && npm run test && npm run build",
     "test": "NODE_OPTIONS=--experimental-vm-modules NODE_NO_WARNINGS=1 jest",
     "test:watch": "npm run test -- --watch",
-    "upgrade": "npx npm-check-updates -u -t minor && npx npm-check-updates --interactive --reject typescript,@types/node && npm i"
+    "upgrade": "npx --yes npm-check-updates -u -t minor && npx --yes npm-check-updates --interactive --reject typescript,@types/node && npm i"
   },
   "dependencies": {
     "color-name": "^2.0.0"
