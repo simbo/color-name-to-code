@@ -1,11 +1,11 @@
 # Color Name to Code
 
 [![npm Package Version](https://img.shields.io/npm/v/color-name-to-code?)](https://www.npmjs.com/package/color-name-to-code)
-[![Package Dependencies](https://img.shields.io/librariesio/release/npm/color-name-to-code)](https://www.npmjs.com/package/color-name-to-code?activeTab=dependencies)
+[![License MIT](https://img.shields.io/badge/license-MIT-4cc552)](http://simbo.mit-license.org/)
+[![GitHub Repo](https://img.shields.io/badge/repo-public-87ceeb)](https://github.com/simbo/color-name-to-code)
+![Native Typescript Support](https://img.shields.io/npm/types/color-name-to-code)
 [![Coveralls Coverage](https://img.shields.io/coveralls/github/simbo/color-name-to-code)](https://coveralls.io/github/simbo/color-name-to-code)
 [![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/simbo/color-name-to-code/ci.yml?branch=main)](https://github.com/simbo/color-name-to-code/actions/workflows/ci.yml)
-[![GitHub Repo](https://img.shields.io/badge/repo-public-87ceeb)](https://github.com/simbo/color-name-to-code)
-[![License MIT](https://img.shields.io/badge/license-MIT-4cc552)](http://simbo.mit-license.org/)
 
 A javascript library that returns a color code for a given color name.
 
